@@ -7,7 +7,7 @@ import html, re, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OLD = "https://www.berufskolleg.biz"
-ANMELDUNG = OLD + "/schuelerinnen-und-schueler/anmeldung/"
+ANMELDUNG = "../anmeldung.html"
 FORM_BS = "../assets/downloads/2027_anmeldeformular_berufsschule_ausfuellbar.pdf"
 
 # Wochentage: S = Schule, P = Praktikum/Betrieb, - = frei, A = Abend
@@ -22,7 +22,7 @@ COURSES = [
   subjects=[("Berufsbezogen",["Geschäftsprozesse","Personalbezogene Prozesse","Mathematik","Englisch"]),("Berufsübergreifend",["Deutsch / Kommunikation","Politik / Gesellschaftslehre","Religion"])],
   next=[("Handelsschule (BFS1)","handelsschule-bfs1","Das Abschlusszeugnis berechtigt zum Besuch der Handelsschule."),("Ausbildung","#","Mit Praktikum und Abschluss in eine Berufsausbildung starten.")],
   contacts=["Frau Danaci","Frau Kauder"],
-  docs=[("Flyer in einfacher Sprache (PDF)", OLD+"/wp-content/uploads/2025/01/40_Ausbildungsvorbereitung_Flyer_einfache-Sprache-3.pdf")]),
+  docs=[("Flyer in einfacher Sprache (PDF)", "../assets/downloads/flyer-av.pdf")]),
 
  dict(slug="handelsschule-bfs1", old="/handelsschule-bfs1/", cat="Vollzeit", tag="schule",
   title="Handelsschule (BFS1)", short="HS9", img="bg-bfs1",
@@ -34,7 +34,7 @@ COURSES = [
   subjects=[("Berufsbezogen",["Geschäftsprozesse","Personalbezogene Prozesse","Mathematik","Englisch"]),("Berufsübergreifend",["Deutsch / Kommunikation","Religionslehre","Sport / Gesundheit","Politik / Gesellschaftslehre"]),("Differenzierung",["Kaufmännisches Rechnen","Projektkurs"])],
   next=[("Handelsschule (BFS2)","handelsschule-bfs2","Im zweiten Jahr den Mittleren Schulabschluss erwerben."),("Ausbildung","#","Direkt in eine kaufmännische Ausbildung starten.")],
   contacts=["Stefanie Hölscher","Birgit Hares","Violetta Boegel"],
-  docs=[("Flyer Handelsschule Typ I (PDF)", OLD+"/wp-content/uploads/2025/01/40_Berufskolleg_Handelsschule-BFS1_Flyer.pdf")]),
+  docs=[("Flyer Handelsschule Typ I (PDF)", "../assets/downloads/flyer-bfs1.pdf")]),
 
  dict(slug="handelsschule-bfs2", old="/handelsschule-bfs2/", cat="Vollzeit", tag="schule",
   title="Handelsschule (BFS2)", short="HS10", img="bg-bfs2",
@@ -46,7 +46,7 @@ COURSES = [
   subjects=[("Berufsbezogen",["Geschäftsprozesse","Gesamtwirtschaftliche Prozesse","Personalbezogene Prozesse","Mathematik","Englisch"]),("Berufsübergreifend",["Deutsch / Kommunikation","Religionslehre","Sport / Gesundheit","Politik / Gesellschaftslehre"]),("Differenzierung",["Kaufmännisches Rechnen","Verkaufskunde"])],
   next=[("Höhere Handelsschule","hoehere-handelsschule","In zwei Jahren zur Fachhochschulreife."),("Ausbildung","#","Mit dem Mittleren Schulabschluss in die Ausbildung.")],
   contacts=["Sonja Grieger","Violetta Boegel","Birgit Hares"],
-  docs=[("Flyer Handelsschule (PDF)", OLD+"/wp-content/uploads/2025/01/40_Berufskolleg_Handelsschule-BFS2_Flyer.pdf")]),
+  docs=[("Flyer Handelsschule (PDF)", "../assets/downloads/flyer-bfs2.pdf")]),
 
  dict(slug="hoehere-handelsschule", old="/hoehere-handelsschule/", cat="Vollzeit", tag="fhr",
   title="Höhere Handelsschule", short="HH", img="bg-hbfs",
@@ -59,7 +59,7 @@ COURSES = [
   exam=dict(title="Abschlussprüfung", note="Für den schulischen Teil der Fachhochschulreife müssen diese Prüfungsfächer bestanden werden:", parts=[("BWL mit Rechnungswesen",1),("Deutsch",1),("Mathematik",1),("Englisch",1)], equal=True),
   next=[("Studium","#","Mit voller Fachhochschulreife an Fachhochschulen studieren."),("Ausbildung","#","Mit Vorsprung in eine kaufmännische Ausbildung.")],
   contacts=["Sophie Benczek","Moritz Elsen"],
-  docs=[("Flyer Höhere Handelsschule (PDF)", OLD+"/wp-content/uploads/2025/01/40_Berufskolleg_Hoehere-Handelsschule_Flyer.pdf")]),
+  docs=[("Flyer Höhere Handelsschule (PDF)", "../assets/downloads/flyer-hh.pdf")]),
 
  dict(slug="internationale-foerderklassen", old="/internationale-foerderklassen/", cat="Vollzeit", tag="schule",
   title="Internationale Förderklassen", short="IF", img="bg-if",
@@ -146,8 +146,8 @@ COURSES = [
   highlights=["Schwerpunkt Personalwirtschaft","Freistellung von der Ausbildereignungsprüfung (IHK)","Projektarbeit mit ca. 160 Stunden – Thema und Note stehen im Zeugnis","Seminare mit dem Trainernetzwerk anders.beraten","Keine laufenden Semestergebühren"],
   subjects=[("3./4. Semester",["Personalwirtschaft","BWL","Wirtschaftsinformatik","Rechnungswesen","Deutsch","Englisch","Mathematik"]),("5./6. Semester",["Personalwirtschaft","BWL","Wirtschaftsinformatik","Existenzgründung","Englisch","Mathematik"]),("7./8. Semester",["Personalwirtschaft","BWL","Rechnungswesen","Wirtschafts- und Arbeitsrecht","Finanzwirtschaft","VWL","Mathematik"])],
   next=[("Führungsaufgaben","#","Personalverantwortung im mittleren Management oder Selbstständigkeit.")],
-  contacts=["Bildungsgangleitung Fachschule"],
-  docs=[("Anmeldeformular Fachschule (PDF)", OLD+"/wp-content/uploads/2026/01/2026_anmeldeformular_fachschule.pdf"),("Einwilligung Datenschutz (PDF)", OLD+"/wp-content/uploads/2025/01/Einwilligungen-bei-Anmeldung-V2.pdf"),("Flyer Fachschule (PDF)", OLD+"/wp-content/uploads/2025/01/40_Berufskolleg_Personalwirtschaft_Flyer-2.pdf")]),
+  contacts=["Julia Sebastian (Bildungsgangleitung)"],
+  docs=[("Anmeldeformular Fachschule (PDF)", "../assets/downloads/anmeldeformular-fachschule.pdf"),("Einwilligung Datenschutz (PDF)", "../assets/downloads/einwilligung-datenschutz.pdf"),("Flyer Fachschule (PDF)", "../assets/downloads/flyer-fs.pdf")]),
 ]
 
 e = html.escape
@@ -163,8 +163,8 @@ def shell():
         s = re.sub(r'href="#(?!top")', 'href="../index.html#', s)
         s = s.replace('href="#top"', 'href="../index.html"')
         s = s.replace('src="assets/', 'src="../assets/')
-        s = s.replace('href="bildungsgaenge/', 'href="')
-        s = s.replace('href="schulberater.html"', 'href="../schulberater.html"')
+        s = re.sub(r'href="(?!https?:|mailto:|tel:|#|\.\./)([^"]+)"', r'href="../\1"', s)
+        s = s.replace('href="../bildungsgaenge/', 'href="')
         return s
     return fix(head), fix(foot), script
 
@@ -226,7 +226,6 @@ def page(c, head, foot, script):
     <div class="course-main">
       <section class="block"><p class="intro">{e(c['intro'])}</p></section>
       {week}{hl}{subj}{exam}{nxt}
-      <p class="muted small">Ausführliche Informationen auch auf der <a href="{OLD}{c['old']}">bisherigen Seite</a>.</p>
     </div>
     <aside class="course-side" aria-label="Steckbrief">
       <div class="card">

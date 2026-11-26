@@ -403,3 +403,68 @@ a:hover .arrow::after,.arrow:hover::after{transform:translateX(3px)}
 .s4{background:#9fd8cc}
 .docs a::before{background:var(--teal-l);color:var(--navy)}
 .home #aktuelles{background:var(--bg)}
+
+/* ===== Unterseiten: Über uns, Beratung, Anmeldung, Aktuelles, Kontakt ===== */
+.about .section{padding:60px 0}
+.about h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:14px}
+.tintband{background:var(--teal-l)}
+.subnav{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0}
+.subnav a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:600;text-decoration:none;color:var(--navy)}
+.subnav a:hover{background:var(--navy);border-color:var(--navy);color:#fff}
+.cards{display:grid;gap:18px;margin-top:22px}
+.cards.two{grid-template-columns:repeat(2,1fr)}
+.cards.three{grid-template-columns:repeat(3,1fr)}
+.card-w{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;min-width:0}
+.tintband .card-w{border-color:transparent}
+.card-w h3{font-size:1.3rem;margin:0 0 8px;color:var(--navy)}
+.card-w h3+h3,.card-w p+h3{margin-top:18px}
+.card-w p{margin:0 0 10px}
+.card-w .btn{margin-top:6px}
+.pill{display:inline-block;background:var(--teal-l);color:var(--navy);font-weight:700;font-size:.8rem;border-radius:999px;padding:3px 10px;margin-bottom:10px}
+.kv{margin:12px 0 0;display:grid;gap:10px}
+.kv dt{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue)}
+.kv dd{margin:1px 0 0;font-weight:600;overflow-wrap:anywhere}
+.sub-h{font-size:1.3rem;margin:30px 0 10px}
+.checks.cols{columns:2;column-gap:32px}.checks.cols li{break-inside:avoid}
+.plain{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-weight:600}
+.mini-steps{margin:8px 0 10px;padding-left:20px;display:grid;gap:4px}
+.split.top{align-items:start}
+.rounded{border-radius:22px;width:100%;height:auto;display:block;margin-bottom:16px}
+.note-draft{background:#fff;border-left:4px solid var(--teal);border-radius:10px;padding:12px 16px;font-weight:600}
+/* Leitbild */
+.leitbild{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:lb}
+.leitbild li{background:#fff;border-radius:22px;padding:24px;counter-increment:lb;position:relative}
+.leitbild li::before{content:counter(lb);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;margin-bottom:12px}
+.leitbild h3{font-size:1.25rem;margin-bottom:8px}.leitbild p{margin:0 0 8px;color:var(--muted)}
+.motto{font-family:var(--head);font-size:1.4rem;font-weight:700;color:var(--navy);margin:26px 0 0}
+/* Organigramm */
+.orgchart{display:block;background:#fff;border:1px solid var(--line);border-radius:22px;padding:12px;margin-top:10px}
+.orgchart img{width:100%;height:auto;display:block;border-radius:12px}
+/* Auszeichnungen */
+.awards{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.awards li{background:#fff;border-radius:22px;padding:24px}
+.awards img{height:90px;width:auto;max-width:100%;object-fit:contain;display:block;margin-bottom:14px}
+.awards h3{font-size:1.2rem;margin-bottom:6px}.awards p{margin:0;color:var(--muted)}
+/* Partnerschulen */
+.partners{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:8px}
+.partners li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;display:grid;grid-template-columns:130px 1fr;gap:12px}
+.partners b{color:var(--navy)}.partners span{color:var(--muted)}
+#europa .split{align-items:start}
+/* Kooperationen */
+.coops{list-style:none;margin:22px 0 12px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.coops li{background:#fff;border-radius:22px;padding:24px}.coops h3{font-size:1.2rem;margin-bottom:6px}.coops p{margin:0;color:var(--muted)}
+/* Aktuelles */
+.posts{display:grid;gap:22px;max-width:900px}
+.post{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:300px 1fr;scroll-margin-top:90px}
+.post>img{width:100%;height:100%;object-fit:cover;min-height:220px}
+.post>div{padding:26px}
+.post:not(:has(img)){grid-template-columns:1fr}
+.post .meta{font-size:.85rem;font-weight:700;color:var(--blue)}
+.post h2{font-size:1.6rem;margin:4px 0 10px}
+.post p{margin:0 0 10px}
+.about section[id]{scroll-margin-top:80px}
+@media(max-width:900px){.cards.three,.leitbild,.awards,.coops{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.cards.two,.cards.three,.leitbild,.awards,.coops{grid-template-columns:1fr}.checks.cols{columns:1}.post{grid-template-columns:1fr}.post>img{height:220px}.partners li{grid-template-columns:1fr;gap:2px}.split{grid-template-columns:1fr;gap:28px}}
+.checks.cols{display:block}.checks.cols li{margin-bottom:10px}
+.card-w p,.card-w a{overflow-wrap:anywhere}
+.post>img{object-position:center 25%}

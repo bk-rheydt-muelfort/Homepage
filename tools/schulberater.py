@@ -51,7 +51,7 @@ REG = {
           ("Erster Schultag", "Bring eine Kopie des Ausbildungsvertrags und deines letzten Zeugnisses mit. Die Einschulungstermine stehen unter Aktuelles.")],
  "if":   [("Beratung bei der KI", "Die Aufnahme läuft über die Kommunale Integrationsstelle der Stadt Mönchengladbach: Fliethstraße 90, Telefon 02161 25-53784, ki@moenchengladbach.de."),
           ("Schulplatz", "Die KI vermittelt dich an unser Berufskolleg und begleitet die Anmeldung.")],
- "fs":   [("Anmelden ab Februar", 'Mit dem <a href="https://www.berufskolleg.biz/wp-content/uploads/2026/01/2026_anmeldeformular_fachschule.pdf">Anmeldeformular der Fachschule (PDF)</a>, Lebenslauf und Nachweisen im Sekretariat.'),
+ "fs":   [("Anmelden ab Februar", 'Mit dem <a href="assets/downloads/anmeldeformular-fachschule.pdf">Anmeldeformular der Fachschule (PDF)</a>, Lebenslauf und Nachweisen im Sekretariat.'),
           ("Start nach den Sommerferien", "Die Einschulung ist am letzten Tag der Sommerferien.")],
 }
 
