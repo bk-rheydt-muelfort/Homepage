@@ -8,7 +8,7 @@ import html, re, pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OLD = "https://www.berufskolleg.biz"
 ANMELDUNG = OLD + "/schuelerinnen-und-schueler/anmeldung/"
-FORM_BS = OLD + "/wp-content/uploads/2026/01/2026_anmeldeformular_berufsschule_ausfuellbar.pdf"
+FORM_BS = "../assets/downloads/2027_anmeldeformular_berufsschule_ausfuellbar.pdf"
 
 # Wochentage: S = Schule, P = Praktikum/Betrieb, - = frei, A = Abend
 COURSES = [
@@ -80,7 +80,7 @@ COURSES = [
   subjects=[("Berufsbezogen",["Industrielle Geschäftsprozesse","Industrielle Steuerung und Kontrolle","Wirtschafts- und Sozialprozesse","Fremdsprachliche Kommunikation"]),("Berufsübergreifend",["Deutsch / Kommunikation","Religionslehre","Sport / Gesundheit","Politik / Gesellschaftslehre"]),("Differenzierung",["Datenverarbeitung"])],
   exam=dict(title="Gestreckte Abschlussprüfung (IHK)", note="Teil 1 zu Beginn des 4. Ausbildungshalbjahres, Teil 2 am Ende der Ausbildung. In der Fachaufgabe präsentierst du ein eigenes Projekt aus deinem Betrieb.", parts=[("Teil 1: Leistungserstellung, Logistik, Beschaffung, Buchhaltung · 90 Min.",25),("Marketing, Vertrieb, Personal, Steuerung · 150 Min.",35),("Wirtschafts- und Sozialkunde · 60 Min.",10),("Fachaufgabe im Einsatzgebiet · 30 Min.",30)]),
   next=[("Fachschule für Wirtschaft","fachschule-fuer-wirtschaft","Nach Ausbildung und Berufspraxis zum Bachelor Professional.")],
-  contacts=["Markus Sauviller"], docs=[("Anmeldeformular Berufsschule (PDF)", FORM_BS)]),
+  contacts=["Markus Sauviller"], docs=[("Anmeldeformular Berufsschule 2027/28 (PDF)", FORM_BS)]),
 
  dict(slug="gross-und-aussenhandel", old="/gross-und-aussenhandelskaufleute/", cat="Berufsschule", tag="beruf",
   title="Kaufleute im Groß- und Außenhandelsmanagement", short="GH", img="teamuebung",
@@ -91,7 +91,7 @@ COURSES = [
   subjects=[("Berufsbezogen",["Großhandelsprozesse","Kaufmännische Steuerung und Kontrolle","Wirtschafts- und Sozialprozesse","Englisch"]),("Berufsübergreifend",["Deutsch / Kommunikation","Religionslehre","Sport / Gesundheit","Politik / Gesellschaftslehre"])],
   exam=dict(title="Gestreckte Abschlussprüfung (IHK)", note="Teil 1 in der Regel nach 18 Monaten über die Inhalte der ersten 15 Monate.", parts=[("Teil 1 · 90 Min.",25),("Großhandelsgeschäfte · 120 Min.",30),("Kaufm. Steuerung und Kontrolle · 90 Min.",15),("Wirtschafts- und Sozialprozesse · 60 Min.",10),("Fallbezogenes Fachgespräch · ca. 30 Min.",20)]),
   next=[("Fachschule für Wirtschaft","fachschule-fuer-wirtschaft","Nach Ausbildung und Berufspraxis zum Bachelor Professional.")],
-  contacts=["Thomas Hurtz","Marcel Kelmes"], docs=[("Anmeldeformular Berufsschule (PDF)", FORM_BS)]),
+  contacts=["Thomas Hurtz","Marcel Kelmes"], docs=[("Anmeldeformular Berufsschule 2027/28 (PDF)", FORM_BS)]),
 
  dict(slug="bueromanagement", old="/kaufleute-fuer-bueromanagement/", cat="Berufsschule", tag="beruf",
   title="Kaufleute für Büromanagement", short="BM", img="bg-bfs2",
@@ -102,7 +102,7 @@ COURSES = [
   subjects=[("Berufsbezogen",["Büroprozesse","Geschäftsprozesse","Steuerung und Kontrolle"]),("Berufsübergreifend",["Deutsch / Kommunikation","Religionslehre","Sport / Gesundheit","Politik / Gesellschaftslehre","Englisch"]),("Differenzierung",["Informationsverarbeitung"])],
   exam=dict(title="Gestreckte Abschlussprüfung (IHK)", note="Teil 1 nach der Hälfte der Ausbildung, Teil 2 am Ende.", parts=[("Teil 1: Informationstechnisches Büromanagement · 120 Min.",25),("Kundenbeziehungsprozesse · 150 Min.",30),("Wirtschafts- und Sozialkunde · 60 Min.",10),("Fachaufgabe in der Wahlqualifikation · ca. 30 Min.",35)]),
   next=[("Fachschule für Wirtschaft","fachschule-fuer-wirtschaft","Nach Ausbildung und Berufspraxis zum Bachelor Professional.")],
-  contacts=["Petra Riefers","Jutta Auler-Roelen"], docs=[("Anmeldeformular Berufsschule (PDF)", FORM_BS)]),
+  contacts=["Petra Riefers","Jutta Auler-Roelen"], docs=[("Anmeldeformular Berufsschule 2027/28 (PDF)", FORM_BS)]),
 
  dict(slug="einzelhandel", old="/einzelhandelskaufleute/", cat="Berufsschule", tag="beruf",
   title="Kaufleute im Einzelhandel", short="EH", img="schulhof-gruppe",
@@ -113,7 +113,7 @@ COURSES = [
   subjects=[("Berufsbezogen",["Kundenkommunikation und Service","Wirtschafts- und Sozialprozesse","Kaufm. Steuerung und Kontrolle","Warenbezogene Prozesse","Datenverarbeitung","Englisch"]),("Berufsübergreifend",["Deutsch / Kommunikation","Politik","Religion","Sport / Gesundheit"])],
   exam=dict(title="Gestreckte Abschlussprüfung (IHK)", note="Teil 1 am Ende des 2. Ausbildungsjahres (meist Ende April/Anfang Mai), Teil 2 am Ende des 3. Jahres.", parts=[("Verkauf und Marketing · 90 Min.",15),("Wirtschafts- und Sozialprozesse · 60 Min.",10),("Warenwirtschaft und Rechnungswesen · 60 Min.",10),("Geschäftsprozesse im Einzelhandel · 105 Min.",25),("Fallbezogenes Fachgespräch · ca. 30 Min.",40)]),
   next=[("Fachschule für Wirtschaft","fachschule-fuer-wirtschaft","Nach Ausbildung und Berufspraxis zum Bachelor Professional.")],
-  contacts=["Shahriar Parvizi","Marie-Claire Heitmann"], docs=[("Anmeldeformular Berufsschule (PDF)", FORM_BS)]),
+  contacts=["Shahriar Parvizi","Marie-Claire Heitmann"], docs=[("Anmeldeformular Berufsschule 2027/28 (PDF)", FORM_BS)]),
 
  dict(slug="verkaeufer", old="/verkaeuferinnen-und-verkaeufer/", cat="Berufsschule", tag="beruf",
   title="Verkäuferinnen und Verkäufer", short="VK", img="bg-bfs1",
@@ -124,7 +124,7 @@ COURSES = [
   subjects=[("Berufsbezogen",["Kundenkommunikation und Service","Wirtschafts- und Sozialprozesse","Kaufm. Steuerung und Kontrolle","Warenbezogene Prozesse","Datenverarbeitung","Englisch"]),("Berufsübergreifend",["Deutsch / Kommunikation","Politik","Religion","Sport / Gesundheit"])],
   exam=dict(title="Abschlussprüfung (IHK)", note="Zwischenprüfung zu Beginn des 2. Ausbildungsjahres (90 Min., Multiple Choice). Abschlussprüfung am Ende des 2. Jahres:", parts=[("Verkauf und Marketing · 90 Min.",25),("Wirtschafts- und Sozialprozesse · 60 Min.",10),("Warenwirtschaft und Rechnungswesen · 60 Min.",15),("Fallbezogenes Fachgespräch · ca. 30 Min.",50)]),
   next=[("Kaufleute im Einzelhandel","einzelhandel","Stufenausbildung: nur noch das dritte Jahr anhängen.")],
-  contacts=["Shahriar Parvizi","Marie-Claire Heitmann"], docs=[("Anmeldeformular Berufsschule (PDF)", FORM_BS)]),
+  contacts=["Shahriar Parvizi","Marie-Claire Heitmann"], docs=[("Anmeldeformular Berufsschule 2027/28 (PDF)", FORM_BS)]),
 
  dict(slug="automobilkaufleute", old="/automobilkaufleute/", cat="Berufsschule", tag="beruf",
   title="Automobilkaufleute", short="AK", img="bg-hbfs",
@@ -135,7 +135,7 @@ COURSES = [
   subjects=[("Berufsbezogen",["Kernprozesse in der Automobilwirtschaft","Kaufmännische Unterstützungsprozesse","Wirtschafts- und Sozialprozesse","Englisch"]),("Berufsübergreifend",["Deutsch / Kommunikation","Religionslehre","Sport / Gesundheit","Politik / Gesellschaftslehre"]),("Differenzierung",["Kfz-Technik","Methodenkompetenz","Datenverarbeitung"])],
   exam=dict(title="Gestreckte Abschlussprüfung (IHK)", note="Teil 1 im Mai des 2. Ausbildungsjahres (bei Verkürzung im November), Teil 2 am Ende des 3. Jahres.", parts=[("Teil 1: Warenwirtschafts- und Werkstattprozesse · 90 Min.",20),("Fahrzeugvertrieb und Finanzdienstleistungen · 90 Min.",25),("Kaufm. Unterstützungsprozesse · 90 Min.",25),("Wirtschafts- und Sozialkunde · 60 Min.",10),("Fallbezogenes Fachgespräch · max. 20 Min.",20)]),
   next=[("Fachschule für Wirtschaft","fachschule-fuer-wirtschaft","Nach Ausbildung und Berufspraxis zum Bachelor Professional.")],
-  contacts=["Andreas Vandelaar"], docs=[("Anmeldeformular Berufsschule (PDF)", FORM_BS)]),
+  contacts=["Andreas Vandelaar"], docs=[("Anmeldeformular Berufsschule 2027/28 (PDF)", FORM_BS)]),
 
  dict(slug="fachschule-fuer-wirtschaft", old="/fachschule-fuer-wirtschaft/", cat="Weiterbildung", tag="weiter",
   title="Fachschule für Wirtschaft", short="FS", img="bk-fachschule",
