@@ -164,6 +164,7 @@ def shell():
         s = s.replace('href="#top"', 'href="../index.html"')
         s = s.replace('src="assets/', 'src="../assets/')
         s = s.replace('href="bildungsgaenge/', 'href="')
+        s = s.replace('href="schulberater.html"', 'href="../schulberater.html"')
         return s
     return fix(head), fix(foot), script
 
