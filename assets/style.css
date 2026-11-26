@@ -5,7 +5,7 @@
 
 :root{
   --navy:#123b37; --navy-2:#1b4f4a; --blue:#0e7c72; --blue-d:#0a5f57;
-  --teal:#14b8a6; --teal-l:#d9f4ee; --sun:#ffe9a8; --sky:#dcebfb;
+  --teal:#14b8a6; --teal-l:#d9f4ee; --sun:#ffe9a8; --sky:#e4efe2;
   --bg:#f3faf8; --surface:#fff; --text:#123b37; --muted:#47706b; --line:#d5ebe6;
   --radius:18px; --radius-s:10px;
   --shadow:0 1px 2px rgba(18,59,55,.06),0 10px 30px rgba(18,59,55,.08);
@@ -110,7 +110,7 @@ a:hover .arrow::after,.arrow:hover::after{transform:translateX(3px)}
 .course p{margin:0 0 16px;color:var(--muted);font-size:.95rem}
 .course .goal{margin-top:auto;display:inline-flex;align-self:flex-start;background:var(--teal-l);color:#0f5f58;font-weight:700;font-size:.85rem;padding:5px 12px;border-radius:999px}
 .course[hidden]{display:none}
-.course.dual .goal{background:#dcebfb;color:#1d4f86}
+.course.dual .goal{background:#e4efe2;color:#2d5a3d}
 .course.weiter .goal{background:#fff1cc;color:#6b4a00}
 .finder-note{margin-top:22px;color:var(--muted)}
 
@@ -258,7 +258,7 @@ a:hover .arrow::after,.arrow:hover::after{transform:translateX(3px)}
 /* Prüfungs-Gewichtung */
 .examscale{display:flex;height:44px;border-radius:12px;overflow:hidden;margin:16px 0 14px}
 .seg{display:grid;place-items:center;color:#fff;font-weight:700;font-size:.9rem;min-width:0;white-space:nowrap}
-.s0{background:#123b37}.s1{background:#0e7c72}.s2{background:#14b8a6}.s3{background:#3d7fc4}.s4{background:#e0a100}
+.s0{background:#123b37}.s1{background:#0e7c72}.s2{background:#14b8a6}.s3{background:#6aa58f}.s4{background:#e0a100}
 .legend{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.95rem}
 .legend li{display:flex;gap:10px;align-items:baseline}
 .legend b{margin-left:auto;font-variant-numeric:tabular-nums}
@@ -377,3 +377,18 @@ a:hover .arrow::after,.arrow:hover::after{transform:translateX(3px)}
 .infotag{background:#fff0c7;border-radius:24px;padding:26px 28px;margin-bottom:20px}
 .infotag h3{font-size:1.8rem;margin-bottom:6px}.infotag p{margin:0;color:#5a4a1a}
 @media(max-width:820px){.result,.reg{grid-template-columns:1fr}.result{padding:22px}.r-blist{grid-template-columns:1fr}}
+
+/* ===== Dunkelgrün-Akzente ===== */
+.header{background:rgba(18,59,55,.97);border-bottom-color:rgba(255,255,255,.08)}
+.header .nav a{color:#e3f6f2}
+.header .nav a:hover{background:rgba(255,255,255,.1);color:#fff}
+.header .btn-dark{background:var(--teal);color:#062b27}
+.header .btn-dark:hover{background:#2dd4bf}
+.menu-btn{color:#fff;border-color:rgba(255,255,255,.3)}
+@media (max-width:1020px){.nav{background:#123b37;border-bottom-color:rgba(255,255,255,.1)}}
+.tile.t1{background:var(--sky)}
+.tile.t2{background:var(--navy)}
+.tile.t2 h3{color:#fff}.tile.t2>p{color:#9fc9c2}
+.tile.t2 a{background:rgba(255,255,255,.1);color:#fff}.tile.t2 a:hover{background:rgba(255,255,255,.18)}.tile.t2 a::after{color:var(--teal)}
+.home #aktuelles{background:var(--teal-l);padding-top:72px}
+.home .news-b a{box-shadow:0 1px 2px rgba(18,59,55,.06)}
