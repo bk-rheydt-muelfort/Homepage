@@ -392,3 +392,14 @@ a:hover .arrow::after,.arrow:hover::after{transform:translateX(3px)}
 .tile.t2 a{background:rgba(255,255,255,.1);color:#fff}.tile.t2 a:hover{background:rgba(255,255,255,.18)}.tile.t2 a::after{color:var(--teal)}
 .home #aktuelles{background:var(--teal-l);padding-top:72px}
 .home .news-b a{box-shadow:0 1px 2px rgba(18,59,55,.06)}
+
+/* ===== Reduzierte Farbpalette: nur Grüntöne ===== */
+.tile.t0,.tile.t1,.tile.t2{background:var(--teal-l)}
+.tile.t2 h3{color:var(--navy)}.tile.t2>p{color:var(--muted)}
+.tile.t2 a{background:rgba(255,255,255,.75);color:var(--navy)}.tile.t2 a:hover{background:#fff}.tile.t2 a::after{color:var(--blue)}
+.home .hero-b .tag,.adv-head .tag,.infotag .tag{background:var(--teal-l);color:var(--navy)}
+.infotag{background:var(--navy);color:#e3f6f2}.infotag h3{color:#fff}.infotag p{color:#cfe9e4}
+.infotag .tag{background:var(--teal);color:#062b27}
+.s4{background:#9fd8cc}
+.docs a::before{background:var(--teal-l);color:var(--navy)}
+.home #aktuelles{background:var(--bg)}
