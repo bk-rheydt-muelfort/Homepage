@@ -127,15 +127,14 @@ def anmeldung():
       <article class="card-w" id="fachschule"><span class="pill">Weiterbildung</span><h3>Fachschule für Wirtschaft</h3><p>Abgabe im Sekretariat, mit Lebenslauf und Nachweisen.</p>
         {go([("Anmeldeformular Fachschule (PDF)", DL + "anmeldeformular-fachschule.pdf"), ("Einwilligung Datenschutz (PDF)", DL + "einwilligung-datenschutz.pdf")])}</article>
     </div>
-    <p class="hint">Noch unsicher, welcher Bildungsgang passt? <a href="schulberater.html">Frag unseren Schulberater.</a></p>""")
+    <a class="sb-teaser" href="schulberater.html"><img src="assets/img/logo-schulberater.webp" alt="Schulberater „Dein Weg“" width="900" height="297" loading="lazy"><span><b>Noch unsicher?</b> In drei Schritten zum passenden Bildungsgang.</span><span class="arrow">Zum Schulberater</span></a>""")
     b += sec("unterlagen", "Diese Unterlagen brauchen wir", f"""
     <div class="cards two">
       <article class="card-w"><h3>Im Sekretariat abgeben</h3>{ul(["Über schulbewerbung.de ausgedrucktes und unterschriebenes Anmeldeformular (bei Minderjährigen mit Unterschrift der Eltern)", f'Unterschriebene <a href="{DL}einwilligung-datenschutz.pdf">Einwilligungen zum Datenschutz</a>'])}</article>
       <article class="card-w"><h3>Am ersten Schultag mitbringen</h3>{ul(["Kopie des Ausbildungsvertrags (Berufsschule)", "Kopie des letzten Schulzeugnisses"])}<p class="muted small">Die Einschulungstermine stehen rechtzeitig unter <a href="aktuelles.html">Aktuelles</a>.</p></article>
     </div>""", tint=True)
     b += sec("infotag", "Lern uns kennen", f"""
-    <div class="infotag"><span class="tag">Infotag</span><h3>{INFOTAG}</h3><p>Schau dir die Schule an, sprich mit Lehrkräften und Schülerinnen und Schülern und stell deine Fragen.</p></div>
-    <p><a class="btn btn-soft" href="schulberater.html"><span class="arrow">Zum Schulberater</span></a></p>""")
+    <div class="infotag"><span class="tag">Infotag</span><h3>{INFOTAG}</h3><p>Schau dir die Schule an, sprich mit Lehrkräften und Schülerinnen und Schülern und stell deine Fragen.</p></div>""")
     page("anmeldung", "Anmeldung", "So meldest du dich am Berufskolleg Rheydt-Mülfort an: Vollzeit, Berufsschule und Fachschule.",
          "Anmeldung", "Anmelden in drei Wegen.", "Wähle deinen Bereich und klick auf den Pfeil.",
          [("wege", "Anmeldewege"), ("unterlagen", "Unterlagen"), ("infotag", "Infotag")], b)

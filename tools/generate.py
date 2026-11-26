@@ -237,6 +237,7 @@ def page(c, head, foot, script):
     <div class="course-main">
       <section class="block"><p class="intro">{e(c['intro'])}</p></section>
       {week}{hl}{subj}{diff}{exam}{nxt}
+      <a class="sb-teaser" href="../schulberater.html"><img src="../assets/img/logo-schulberater.webp" alt="Schulberater „Dein Weg“" width="900" height="297" loading="lazy"><span><b>Noch unsicher?</b> In drei Schritten zum passenden Bildungsgang.</span><span class="arrow">Zum Schulberater</span></a>
     </div>
     <aside class="course-side" aria-label="Steckbrief">
       <div class="card">
