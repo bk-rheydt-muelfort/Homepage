@@ -477,3 +477,4 @@ a:hover .arrow::after,.arrow:hover::after{transform:translateX(3px)}
 .r-subj .tags{margin-bottom:8px}.r-subj .sg{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue);margin:8px 0 4px}
 .result .tags li{background:#fff}
 .diffs{grid-template-columns:1fr}
+.header .btn-dark{background:var(--teal-l);color:var(--navy)}.header .btn-dark:hover{background:#fff}
