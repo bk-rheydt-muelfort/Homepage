@@ -68,7 +68,7 @@ def build():
   <section class="section" id="team" aria-labelledby="team-h"><div class="wrap">
     <h2 id="team-h">Ansprechpersonen</h2>
     <div class="cards three">
-      <article class="card-w"><h3>Schulleitung</h3><p><b>OStD’ Stephany Kerstges</b><br>Schulleiterin</p><p class="muted small">Termine über das Sekretariat</p></article>
+      <article class="card-w"><h3>Schulleitung</h3><p><b>OStD’ Stephany Kerstges</b><br>Schulleiterin</p><dl class="kv"><div><dt>E-Mail</dt><dd><a href="mailto:kerstges@berufskolleg.biz">kerstges@berufskolleg.biz</a></dd></div></dl></article>
       <article class="card-w"><h3>Erweiterte Schulleitung</h3><dl class="kv">{esl}</dl></article>
       <article class="card-w"><h3>Schulverwaltung</h3><dl class="kv"><div><dt>Sekretariat</dt><dd>Frau Meuter, Frau Jost</dd></div><div><dt>Gebäudemanagement</dt><dd>Herr Conen</dd></div><div><dt>Telefon</dt><dd><a href="tel:+492166917920">02166 917920</a></dd></div><div><dt>E-Mail</dt><dd><a href="mailto:info@berufskolleg.biz">info@berufskolleg.biz</a></dd></div></dl></article>
     </div>
