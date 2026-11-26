@@ -90,6 +90,7 @@ def build():
 <title>Schulberater – Berufskolleg Rheydt-Mülfort</title>
 <meta name="description" content="In drei Schritten zum passenden Bildungsgang am Berufskolleg Rheydt-Mülfort: Abschluss wählen, Bildungsgang finden, anmelden.">
 <meta name="theme-color" content="#123b37">
+<meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="home">

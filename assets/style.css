@@ -491,3 +491,4 @@ a:hover .arrow::after,.arrow:hover::after{transform:translateX(3px)}
 .go a{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--teal-l);border-radius:12px;padding:12px 14px;font-weight:700;text-decoration:none;color:var(--navy)}
 .go a::after{content:"→";color:var(--blue);font-size:1.1rem}
 .go a:hover{background:var(--navy);color:#fff}.go a:hover::after{color:var(--teal)}
+.draft-note[hidden]{display:none}

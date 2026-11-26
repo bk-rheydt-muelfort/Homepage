@@ -28,6 +28,7 @@ def page(slug, title, desc, tag, h1, lead, nav, body):
 <title>{title} – Berufskolleg Rheydt-Mülfort</title>
 <meta name="description" content="{desc}">
 <meta name="theme-color" content="#123b37">
+<meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="home">

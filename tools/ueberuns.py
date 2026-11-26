@@ -50,6 +50,7 @@ def build():
 <title>Über uns – Berufskolleg Rheydt-Mülfort</title>
 <meta name="description" content="Leitbild, Organigramm, Auszeichnungen und Partnerschulen des Berufskollegs Rheydt-Mülfort in Mönchengladbach.">
 <meta name="theme-color" content="#123b37">
+<meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="home">
