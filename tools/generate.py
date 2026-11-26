@@ -202,7 +202,7 @@ def page(c, head, foot, script):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(c['title'])} – Berufskolleg Rheydt-Mülfort</title>
 <meta name="description" content="{e(c['claim'])} {e(c['title'])} am Berufskolleg Rheydt-Mülfort in Mönchengladbach.">
-<meta name="theme-color" content="#0b0a4f">
+<meta name="theme-color" content="#123b37">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body class="sub">

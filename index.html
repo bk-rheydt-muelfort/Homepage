@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Berufskolleg Rheydt-Mülfort – Mehr als eine Schule</title>
 <meta name="description" content="Berufskolleg Rheydt-Mülfort für Wirtschaft und Verwaltung in Mönchengladbach: Schulabschlüsse, Berufsschule und Weiterbildung. Bestes Berufskolleg 2026 der IHK Mittlerer Niederrhein.">
-<meta name="theme-color" content="#0b0a4f">
+<meta name="theme-color" content="#123b37">
 <link rel="preload" href="assets/fonts/dosis-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
 <div class="draft-note" role="note">Entwurf – keine offizielle Seite. Inhalte stammen von berufskolleg.biz, Fotos vom Schulberater „Dein Weg“.</div>
 
@@ -35,108 +35,41 @@
 </header>
 
 <main id="inhalt">
-  <section class="hero" id="top">
-    <picture>
-      <source media="(max-width:700px)" srcset="assets/img/schulhof-gruppe-640.webp">
-      <img src="assets/img/schulhof-gruppe-1200.webp" alt="" width="1200" height="675">
-    </picture>
-    <div class="wrap">
-      <span class="badge"><b>IHK</b> Bestes Berufskolleg 2026</span>
-      <h1>Mehr als eine <em>Schule.</em></h1>
-      <p>Schulabschluss, Ausbildung, Weiterbildung – für Wirtschaft und Verwaltung in Mönchengladbach.</p>
-      <div class="btns">
-        <a class="btn btn-primary" href="#bildungsgaenge"><span class="arrow">Bildungsgang finden</span></a>
-        <a class="btn btn-ghost" href="https://www.berufskolleg.biz/schuelerinnen-und-schueler/anmeldung/">Anmelden</a>
-      </div>
-    </div>
+  <section class="hero-b" id="top">
+    <div class="photo"><img src="assets/img/schueler-gruppe-1200.webp" alt="Schülerinnen und Schüler arbeiten gemeinsam am Laptop" width="1200" height="675"></div>
+    <div class="wrap"><div class="card">
+      <span class="tag">Bestes Berufskolleg 2026 · IHK</span>
+      <h1>Dein Weg in Wirtschaft und Verwaltung.</h1>
+      <p>Schulabschluss, Ausbildung oder Weiterbildung: Wir begleiten dich.</p>
+      <div class="btns"><a class="btn btn-primary" href="#bildungsgaenge"><span class="arrow">Los geht's</span></a><a class="btn btn-soft" href="https://www.berufskolleg.biz/schuelerinnen-und-schueler/anmeldung/">Anmelden</a></div>
+    </div></div>
   </section>
 
   <section class="section" id="bildungsgaenge" aria-labelledby="bg-h">
     <div class="wrap">
-      <div class="sec-head center">
-        <h2 id="bg-h">Was ist dein Ziel?</h2>
-      </div>
-      <div class="filters" role="group" aria-label="Nach Ziel filtern">
-        <button class="chip" aria-pressed="true" data-filter="alle">Alle</button>
-        <button class="chip" aria-pressed="false" data-filter="schule">Schulabschluss</button>
-        <button class="chip" aria-pressed="false" data-filter="fhr">Fachhochschulreife</button>
-        <button class="chip" aria-pressed="false" data-filter="beruf">Ausbildung</button>
-        <button class="chip" aria-pressed="false" data-filter="weiter">Weiterbildung</button>
-      </div>
-      <ul class="courses slim" aria-live="polite">
-        <li class="course" data-tags="schule"><a href="bildungsgaenge/ausbildungsvorbereitung.html">
-          <span class="type">Vollzeit</span><h3>Ausbildungsvorbereitung</h3>
-          <span class="goal">Erster Schulabschluss</span></a></li>
-        <li class="course" data-tags="schule"><a href="bildungsgaenge/handelsschule-bfs1.html">
-          <span class="type">Vollzeit</span><h3>Handelsschule (BFS1)</h3>
-          <span class="goal">Erweiterter Erster Schulabschluss</span></a></li>
-        <li class="course" data-tags="schule"><a href="bildungsgaenge/handelsschule-bfs2.html">
-          <span class="type">Vollzeit</span><h3>Handelsschule (BFS2)</h3>
-          <span class="goal">Mittlerer Schulabschluss</span></a></li>
-        <li class="course" data-tags="fhr"><a href="bildungsgaenge/hoehere-handelsschule.html">
-          <span class="type">Vollzeit</span><h3>Höhere Handelsschule</h3>
-          <span class="goal">Fachhochschulreife</span></a></li>
-        <li class="course" data-tags="schule"><a href="bildungsgaenge/internationale-foerderklassen.html">
-          <span class="type">Vollzeit</span><h3>Internationale Förderklassen</h3>
-          <span class="goal">vergleichbar Erster Schulabschluss</span></a></li>
-        <li class="course dual" data-tags="beruf"><a href="bildungsgaenge/industriekaufleute.html">
-          <span class="type">Berufsschule</span><h3>Industriekaufleute</h3>
-          <span class="goal">Berufsabschluss</span></a></li>
-        <li class="course dual" data-tags="beruf"><a href="bildungsgaenge/gross-und-aussenhandel.html">
-          <span class="type">Berufsschule</span><h3>Groß- und Außenhandelsmanagement</h3>
-          <span class="goal">Berufsabschluss</span></a></li>
-        <li class="course dual" data-tags="beruf"><a href="bildungsgaenge/bueromanagement.html">
-          <span class="type">Berufsschule</span><h3>Kaufleute für Büromanagement</h3>
-          <span class="goal">Berufsabschluss</span></a></li>
-        <li class="course dual" data-tags="beruf"><a href="bildungsgaenge/einzelhandel.html">
-          <span class="type">Berufsschule</span><h3>Einzelhandelskaufleute</h3>
-          <span class="goal">Berufsabschluss</span></a></li>
-        <li class="course dual" data-tags="beruf"><a href="bildungsgaenge/verkaeufer.html">
-          <span class="type">Berufsschule</span><h3>Verkäuferinnen und Verkäufer</h3>
-          <span class="goal">Berufsabschluss</span></a></li>
-        <li class="course dual" data-tags="beruf"><a href="bildungsgaenge/automobilkaufleute.html">
-          <span class="type">Berufsschule</span><h3>Automobilkaufleute</h3>
-          <span class="goal">Berufsabschluss</span></a></li>
-        <li class="course weiter" data-tags="weiter"><a href="bildungsgaenge/fachschule-fuer-wirtschaft.html">
-          <span class="type">Teilzeit</span><h3>Fachschule für Wirtschaft</h3>
-          <span class="goal">Bachelor Professional</span></a></li>
-      </ul>
-      <p class="finder-note center">Unsicher? <a href="https://bk-rheydt-muelfort.github.io/dein-weg/">Der Schulberater „Dein Weg“ hilft dir weiter.</a></p>
+      <h2 id="bg-h" style="margin-bottom:28px">Was möchtest du erreichen?</h2>
+      <ul class="tiles"><li class="tile t0"><h3>Schulabschluss</h3><p>Vollzeit, 1–2 Jahre</p><ul><li><a href="bildungsgaenge/ausbildungsvorbereitung.html">Ausbildungsvorbereitung</a></li><li><a href="bildungsgaenge/handelsschule-bfs1.html">Handelsschule (BFS1)</a></li><li><a href="bildungsgaenge/handelsschule-bfs2.html">Handelsschule (BFS2)</a></li><li><a href="bildungsgaenge/hoehere-handelsschule.html">Höhere Handelsschule</a></li><li><a href="bildungsgaenge/internationale-foerderklassen.html">Internationale Förderklassen</a></li></ul></li><li class="tile t1"><h3>Ausbildung</h3><p>Berufsschule im dualen System</p><ul><li><a href="bildungsgaenge/industriekaufleute.html">Industriekaufleute</a></li><li><a href="bildungsgaenge/gross-und-aussenhandel.html">Groß- und Außenhandelsmanagement</a></li><li><a href="bildungsgaenge/bueromanagement.html">Kaufleute für Büromanagement</a></li><li><a href="bildungsgaenge/einzelhandel.html">Kaufleute im Einzelhandel</a></li><li><a href="bildungsgaenge/verkaeufer.html">Verkäuferinnen und Verkäufer</a></li><li><a href="bildungsgaenge/automobilkaufleute.html">Automobilkaufleute</a></li></ul></li><li class="tile t2"><h3>Weiterbildung</h3><p>Berufsbegleitend, abends</p><ul><li><a href="bildungsgaenge/fachschule-fuer-wirtschaft.html">Fachschule für Wirtschaft</a></li></ul></li></ul>
+      <p class="hint">Noch unsicher? <a href="https://bk-rheydt-muelfort.github.io/dein-weg/">Frag den Schulberater „Dein Weg“.</a></p>
     </div>
   </section>
 
-  <section class="section tint" id="aktuelles" aria-labelledby="news-h">
+  <section class="section" id="aktuelles" aria-labelledby="news-h" style="padding-top:0">
     <div class="wrap">
-      <div class="sec-head">
-        <h2 id="news-h">Aktuelles</h2>
-        <a class="more" href="https://www.berufskolleg.biz/blog/"><span class="arrow">Alle Beiträge</span></a>
-      </div>
-      <ul class="news-min">
-        <li><a href="https://www.berufskolleg.biz/">
-          <img src="assets/img/bk-auszeichnung-2026-1200.webp" alt="Schulleiterin Stephany Kerstges mit der IHK-Urkunde" width="480" height="480" loading="lazy" style="object-position:center 25%">
-          <time datetime="2026-10-09">9. Oktober 2026</time><h3>Wir sind „Bestes Berufskolleg 2026“!</h3></a></li>
-        <li><a href="https://www.berufskolleg.biz/ueber-uns/europaschule/eu-projekte/">
-          <img src="assets/img/bk-erasmus-1200.webp" alt="Gruppenfoto eines Erasmus-Austauschs" width="750" height="488" loading="lazy">
-          <time>Europaschule</time><h3>Unterwegs mit Erasmus+</h3></a></li>
-        <li><a href="https://www.berufskolleg.biz/">
-          <img src="assets/img/bk-berufsorientierung-640.webp" alt="Schülerinnen und Schüler an Ständen von Unternehmen" width="640" height="429" loading="lazy">
-          <time>Berufsorientierung</time><h3>Unternehmen stellen sich vor</h3></a></li>
-      </ul>
+      <div class="sec-head"><h2 id="news-h">Neu bei uns</h2><a class="more" href="https://www.berufskolleg.biz/blog/"><span class="arrow">Alle Beiträge</span></a></div>
+      <ul class="news-b"><li><a href="https://www.berufskolleg.biz/"><img src="assets/img/bk-auszeichnung-2026-1200.webp" alt="Schulleiterin Stephany Kerstges mit der IHK-Urkunde" loading="lazy"><span class="meta">9. Oktober 2026</span><h3>Wir sind „Bestes Berufskolleg 2026“!</h3></a></li><li><a href="https://www.berufskolleg.biz/ueber-uns/europaschule/eu-projekte/"><img src="assets/img/bk-erasmus-1200.webp" alt="Gruppenfoto eines Erasmus-Austauschs" loading="lazy"><span class="meta">Europaschule</span><h3>Unterwegs mit Erasmus+</h3></a></li><li><a href="https://www.berufskolleg.biz/"><img src="assets/img/bk-berufsorientierung-640.webp" alt="Schülerinnen und Schüler an Ständen von Unternehmen" loading="lazy"><span class="meta">Berufsorientierung</span><h3>Unternehmen stellen sich vor</h3></a></li></ul>
     </div>
   </section>
 
-  <section class="section" id="kontakt" aria-labelledby="kontakt-h">
-    <div class="wrap contact-min">
-      <div>
-        <h2 id="kontakt-h">Besuch uns</h2>
-        <p class="lead">Kirschhecke 10 · 41199 Mönchengladbach</p>
-      </div>
+  <section class="section contact-b" id="kontakt" aria-labelledby="kontakt-h">
+    <div class="wrap">
+      <h2 id="kontakt-h">Wir sind für dich da.</h2>
+      <p class="addr">Kirschhecke 10 · 41199 Mönchengladbach</p>
       <dl>
         <div><dt>Telefon</dt><dd><a href="tel:+492166917920">02166 917920</a></dd></div>
         <div><dt>E-Mail</dt><dd><a href="mailto:info@berufskolleg.biz">info@berufskolleg.biz</a></dd></div>
         <div><dt>Sekretariat</dt><dd>Mo, Mi, Do 7:30–15:00 · Di, Fr 7:30–13:00</dd></div>
       </dl>
-      <a class="btn btn-dark" href="https://www.berufskolleg.biz/schuelerinnen-und-schueler/anfahrt/"><span class="arrow">Anfahrt</span></a>
+      <a class="btn" href="https://www.berufskolleg.biz/schuelerinnen-und-schueler/anfahrt/"><span class="arrow">Anfahrt</span></a>
     </div>
   </section>
 </main>
