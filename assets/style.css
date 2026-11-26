@@ -478,3 +478,11 @@ a:hover .arrow::after,.arrow:hover::after{transform:translateX(3px)}
 .result .tags li{background:#fff}
 .diffs{grid-template-columns:1fr}
 .header .btn-dark{background:var(--teal-l);color:var(--navy)}.header .btn-dark:hover{background:#fff}
+/* Schulberater-Logo */
+.sb-logo{display:block;height:auto;width:min(340px,80%);margin-bottom:18px}
+.sb-teaser{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin:30px auto 0;max-width:900px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:18px 26px;text-decoration:none;color:var(--navy)}
+.sb-teaser img{width:210px;height:auto}
+.sb-teaser span:not(.arrow){flex:1;min-width:200px;color:var(--muted)}.sb-teaser b{color:var(--navy)}
+.sb-teaser .arrow{font-weight:700;background:var(--teal-l);border-radius:999px;padding:10px 18px}
+.sb-teaser:hover{border-color:var(--teal)}
+@media(max-width:600px){.sb-teaser{gap:14px;padding:18px}.sb-teaser img{width:180px}}
