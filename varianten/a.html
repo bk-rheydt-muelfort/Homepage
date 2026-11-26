@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Variante A – Berufskolleg Rheydt-Mülfort</title>
+<style>
+@font-face{font-family:"Dosis";src:url("../assets/fonts/dosis-latin.woff2") format("woff2");font-weight:200 800;font-display:swap}
+*{box-sizing:border-box}img{max-width:100%;display:block;height:auto}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden}
+h1,h2,h3{margin:0;line-height:1.1;font-family:"Dosis",system-ui,sans-serif}
+.wrap{max-width:1200px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}
+@media(min-width:760px){.wrap{padding:0 32px}}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+.vswitch{position:sticky;top:0;z-index:60;display:flex;gap:6px;justify-content:center;align-items:center;flex-wrap:wrap;background:#ffd166;color:#3b2a00;font:600 .85rem system-ui;padding:6px 10px}
+.vswitch a{color:#3b2a00;padding:3px 10px;border-radius:999px;text-decoration:none;border:1px solid rgba(0,0,0,.25)}
+.vswitch a[aria-current]{background:#3b2a00;color:#ffd166}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:80px}
+.hdr img{height:50px;width:auto}
+.hdr ul{list-style:none;display:flex;gap:6px;margin:0;padding:0}
+.hdr nav a{display:block;padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:600}
+@media(max-width:1000px){.hdr nav{display:none}.hdr img{height:40px}.hdr .wrap{height:66px}}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;padding:13px 22px;border-radius:999px;line-height:1.2;border:2px solid transparent}
+.arrow::after{content:"→";margin-left:4px}
+
+body{background:#fff;color:#14213d}
+a{color:#0c71c3}
+.hdr{border-bottom:1px solid #e6ebf2;background:#fff}
+.hdr nav a{color:#14213d}.hdr nav a:hover{color:#0c71c3}
+.cta{background:#0c71c3;color:#fff}
+.hero{padding:64px 0 72px}
+.hero .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.eyebrow{font-weight:700;color:#0c71c3;font-size:.9rem;margin:0 0 14px}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:700;color:#0b2545}
+.lead{font-size:1.2rem;color:#4a5872;margin:16px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.pri{background:#0c71c3;color:#fff}.sec{border-color:#c9d6e6;color:#0b2545}
+.award{margin:34px 0 0;font-weight:600;color:#4a5872;display:flex;gap:10px;align-items:center}
+.award b{background:#e8f1fb;color:#0c71c3;border-radius:6px;padding:2px 8px;font-size:.8rem}
+.pic img{border-radius:24px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.sec{padding:80px 0}.alt{background:#f4f7fb}
+.sec h2{font-size:clamp(2rem,4vw,2.8rem);color:#0b2545;margin-bottom:34px}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.col h3{font-size:1.5rem;color:#0b2545}.col>p{margin:2px 0 14px;color:#6a7790;font-size:.95rem}
+.col ul{list-style:none;margin:0;padding:0;border-top:2px solid #0b2545}
+.col a{display:flex;justify-content:space-between;gap:12px;padding:14px 2px;border-bottom:1px solid #e1e7f0;text-decoration:none;color:#14213d;font-weight:600}
+.col a:hover span{color:#0c71c3}.col small{color:#6a7790;font-weight:500;text-align:right}
+.head{display:flex;justify-content:space-between;align-items:baseline}.head a{font-weight:700;text-decoration:none}
+.news{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.news a{text-decoration:none;color:#14213d;display:grid;gap:6px}
+.news img{aspect-ratio:3/2;object-fit:cover;width:100%;border-radius:16px;margin-bottom:8px}
+.meta{font-size:.85rem;color:#0c71c3;font-weight:700}.news h3{font-size:1.3rem;color:#0b2545}
+.contact{display:grid;grid-template-columns:1fr 2fr;gap:30px;align-items:start}.contact h2{margin-bottom:8px}
+.contact dl{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:0}
+dt{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#6a7790}dd{margin:4px 0 0;font-weight:600}
+.ftr{background:#0b2545;color:#c8d3e6;padding:26px 0;font-size:.92rem}.ftr .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}.ftr a{color:#fff}
+@media(max-width:900px){.hero .grid,.cols,.news,.contact,.contact dl{grid-template-columns:1fr}.hero .grid{gap:30px}.pic{order:-1}}
+
+</style></head>
+<body class="va">
+<div class="vswitch" role="navigation" aria-label="Varianten">Entwurf · Klar &amp; hell · <a href="a.html" aria-current=page>Variante A</a><a href="b.html">Variante B</a><a href="c.html">Variante C</a> <a href="../index.html">Aktuelle Fassung</a></div>
+<header class="hdr"><div class="wrap"><a href="#"><img src="../assets/logo.png" alt="Berufskolleg Rheydt-Mülfort für Wirtschaft und Verwaltung" width="655" height="217"></a>
+<nav aria-label="Hauptnavigation"><ul><li><a href="#bildungsgaenge">Bildungsgänge</a></li><li><a href="#aktuelles">Aktuelles</a></li><li><a href="https://www.berufskolleg.biz/schuelerinnen-und-schueler/beratung/schulsozialarbeit/">Beratung</a></li><li><a href="https://www.berufskolleg.biz/ueber-uns/auszeichnungen/">Über uns</a></li><li><a href="#kontakt">Kontakt</a></li></ul></nav><a class="btn cta" href="https://www.berufskolleg.biz/schuelerinnen-und-schueler/anmeldung/">Anmelden</a></div></header>
+<main>
+<section class="hero"><div class="wrap grid">
+  <div class="txt"><p class="eyebrow">Berufskolleg für Wirtschaft und Verwaltung · Mönchengladbach</p>
+  <h1>Mehr als eine Schule.</h1>
+  <p class="lead">Vom Schulabschluss über die Ausbildung bis zur Weiterbildung.</p>
+  <div class="btns"><a class="btn pri" href="#bildungsgaenge"><span class="arrow">Bildungsgang finden</span></a><a class="btn sec" href="https://bk-rheydt-muelfort.github.io/dein-weg/">Schulberater</a></div>
+  <p class="award"><b>IHK</b> Bestes Berufskolleg 2026</p></div>
+  <div class="pic"><img src="../assets/img/schulhof-gruppe-1200.webp" alt="Schülerinnen und Schüler vor dem Schulgebäude" width="1200" height="675"></div>
+</div></section>
+<section class="sec" id="bildungsgaenge"><div class="wrap"><h2>Unsere Bildungsgänge</h2><div class="cols"><div class="col"><h3>Schulabschluss</h3><p>Vollzeit, 1–2 Jahre</p><ul><li><a href="../bildungsgaenge/ausbildungsvorbereitung.html"><span>Ausbildungsvorbereitung</span><small>Erster Schulabschluss</small></a></li><li><a href="../bildungsgaenge/handelsschule-bfs1.html"><span>Handelsschule (BFS1)</span><small>Erweiterter Erster Schulabschluss</small></a></li><li><a href="../bildungsgaenge/handelsschule-bfs2.html"><span>Handelsschule (BFS2)</span><small>Mittlerer Schulabschluss</small></a></li><li><a href="../bildungsgaenge/hoehere-handelsschule.html"><span>Höhere Handelsschule</span><small>Fachhochschulreife</small></a></li><li><a href="../bildungsgaenge/internationale-foerderklassen.html"><span>Internationale Förderklassen</span><small>Deutsch lernen und Abschluss</small></a></li></ul></div><div class="col"><h3>Ausbildung</h3><p>Berufsschule im dualen System</p><ul><li><a href="../bildungsgaenge/industriekaufleute.html"><span>Industriekaufleute</span><small>3 Jahre</small></a></li><li><a href="../bildungsgaenge/gross-und-aussenhandel.html"><span>Groß- und Außenhandelsmanagement</span><small>3 Jahre</small></a></li><li><a href="../bildungsgaenge/bueromanagement.html"><span>Kaufleute für Büromanagement</span><small>3 Jahre</small></a></li><li><a href="../bildungsgaenge/einzelhandel.html"><span>Kaufleute im Einzelhandel</span><small>3 Jahre</small></a></li><li><a href="../bildungsgaenge/verkaeufer.html"><span>Verkäuferinnen und Verkäufer</span><small>2 Jahre</small></a></li><li><a href="../bildungsgaenge/automobilkaufleute.html"><span>Automobilkaufleute</span><small>3 Jahre</small></a></li></ul></div><div class="col"><h3>Weiterbildung</h3><p>Berufsbegleitend, abends</p><ul><li><a href="../bildungsgaenge/fachschule-fuer-wirtschaft.html"><span>Fachschule für Wirtschaft</span><small>Bachelor Professional</small></a></li></ul></div></div></div></section>
+<section class="sec alt" id="aktuelles"><div class="wrap"><div class="head"><h2>Aktuelles</h2><a href="https://www.berufskolleg.biz/blog/"><span class="arrow">Alle Beiträge</span></a></div><ul class="news"><li><a href="https://www.berufskolleg.biz/"><img src="../assets/img/bk-auszeichnung-2026-1200.webp" alt="Schulleiterin Stephany Kerstges mit der IHK-Urkunde" loading="lazy"><span class="meta">9. Oktober 2026</span><h3>Wir sind „Bestes Berufskolleg 2026“!</h3></a></li><li><a href="https://www.berufskolleg.biz/ueber-uns/europaschule/eu-projekte/"><img src="../assets/img/bk-erasmus-1200.webp" alt="Gruppenfoto eines Erasmus-Austauschs" loading="lazy"><span class="meta">Europaschule</span><h3>Unterwegs mit Erasmus+</h3></a></li><li><a href="https://www.berufskolleg.biz/"><img src="../assets/img/bk-berufsorientierung-640.webp" alt="Schülerinnen und Schüler an Ständen von Unternehmen" loading="lazy"><span class="meta">Berufsorientierung</span><h3>Unternehmen stellen sich vor</h3></a></li></ul></div></section>
+<section class="sec" id="kontakt"><div class="wrap contact"><div><h2>Kontakt</h2><p>Kirschhecke 10 · 41199 Mönchengladbach</p></div><dl><div><dt>Telefon</dt><dd>02166 917920</dd></div><div><dt>E-Mail</dt><dd><a href="mailto:info@berufskolleg.biz">info@berufskolleg.biz</a></dd></div><div><dt>Sekretariat</dt><dd>Mo, Mi, Do 7:30–15:00 · Di, Fr 7:30–13:00</dd></div></dl></div></section></main>
+<footer class="ftr"><div class="wrap"><span>Berufskolleg Rheydt-Mülfort · Kirschhecke 10 · 41199 Mönchengladbach</span><span><a href="https://www.berufskolleg.biz/impressum/">Impressum</a> · <a href="https://www.berufskolleg.biz/datenschutzerklaerung/">Datenschutz</a></span></div></footer>
+</body></html>
