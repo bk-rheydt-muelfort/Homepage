@@ -25,7 +25,7 @@ CHOICES = [
   then="Danach: Höhere Handelsschule (Fachhochschulreife) oder eine Ausbildung.", reg="voll"),
  dict(id="msa", label="Mittlerer Schulabschluss (FOR)", hint="oder Versetzung in die Oberstufe am Gymnasium",
   slug="hoehere-handelsschule", name="Höhere Handelsschule", goal="Fachhochschulreife (schulischer Teil)", dauer="2 Jahre",
-  points=["BWL mit Rechnungswesen, Deutsch, Mathe, Englisch","Schwerpunkt wählbar: Business-IT, Englisch, Europakunde oder Spanisch","Betriebspraktikum am Ende des ersten Jahres"],
+  points=["BWL mit Rechnungswesen, Deutsch, Mathe, Englisch","Differenzierung nach Wahl: Spanisch, Englisch oder Gesundheitscoaching","Betriebspraktikum am Ende des ersten Jahres"],
   then="Danach: Studium an einer Fachhochschule oder eine Ausbildung mit Vorsprung.", reg="voll",
   extra="Für die Anmeldung brauchst du einen tabellarischen Lebenslauf und eine Kopie deines letzten Zeugnisses. Es gibt eine schriftliche Beratungsprüfung in Deutsch, Englisch und Mathe."),
  dict(id="neu", label="Neu in Deutschland", hint="ab 16 Jahren, du lernst noch Deutsch",
@@ -43,6 +43,19 @@ CHOICES = [
   then="Danach: Führungsaufgaben im mittleren Management.", reg="fs",
   extra="Voraussetzung: einschlägige Ausbildung, Berufsschulabschluss, Fachoberschulreife und ein Jahr Berufstätigkeit (auch begleitend) – oder fünf Jahre Berufserfahrung."),
 ]
+
+# Fächer und „Was dich erwartet“ aus den Bildungsgang-Daten übernehmen
+import sys; sys.path.insert(0, str(ROOT/"tools"))
+from generate import COURSES
+_BY = {c["slug"]: c for c in COURSES}
+for _c in CHOICES:
+    if _c["slug"]:
+        _k = _BY[_c["slug"]]
+        _c["expect"] = _k["intro"]
+        _c["subjects"] = _k["subjects"]
+    else:
+        _c["expect"] = "Du lernst abwechselnd im Betrieb und bei uns. In der Berufsschule vertiefst du die Theorie zu deinem Beruf in Lernfeldern, die sich an echten Arbeitsabläufen orientieren, dazu kommen Deutsch, Politik, Religion und Sport."
+        _c["subjects"] = [("Für alle Berufe", ["Deutsch / Kommunikation", "Politik / Gesellschaftslehre", "Religionslehre", "Sport / Gesundheit", "Englisch"]), ("Je nach Beruf", ["Lernfelder deines Ausbildungsberufs"])]
 
 REG = {
  "voll": [("Online bewerben", f'Über <a href="{SCHULBEWERBUNG}">schulbewerbung.de</a> mit dem Startcode deiner jetzigen Schule. Ohne Startcode kannst du dich dort neu registrieren.'),
@@ -107,7 +120,9 @@ def build():
         <div class="r-main">
           <span class="r-from"></span>
           <h3 class="r-name"></h3>
+          <p class="r-expect"></p>
           <ul class="checks r-points"></ul>
+          <div class="r-subj"><h4>Deine Fächer</h4><div class="r-sg"></div></div>
           <p class="r-then muted"></p>
           <p class="r-extra muted small"></p>
           <div class="r-berufe" hidden><h4>Welchen Beruf lernst du?</h4><ul class="r-blist"></ul></div>
@@ -150,6 +165,8 @@ function pick(id){{
   $('.r-from').textContent='Mit „'+cur.label+'“';
   $('.r-name').textContent=cur.name;
   $('.r-goal').textContent=cur.goal;$('.r-dauer').textContent=cur.dauer;
+  $('.r-expect').textContent=cur.expect;
+  $('.r-sg').innerHTML=cur.subjects.map(([g,xs])=>'<p class="sg">'+g+'</p><ul class="tags">'+xs.map(x=>'<li>'+x+'</li>').join('')+'</ul>').join('');
   $('.r-points').innerHTML=cur.points.map(p=>'<li>'+p+'</li>').join('');
   $('.r-then').textContent=cur.then;$('.r-extra').textContent=cur.extra||'';
   const b=$('.r-berufe');b.hidden=!cur.berufe;

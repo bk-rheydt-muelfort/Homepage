@@ -54,8 +54,12 @@ COURSES = [
   intro="Anhand realitätsnaher betriebswirtschaftlicher Situationen erwirbst du fundiertes Wirtschaftswissen. Das verbessert deine Chancen auf einen attraktiven Ausbildungsplatz und schafft die schulischen Voraussetzungen für ein Fachhochschulstudium.",
   facts=[("Abschluss","Schulischer Teil der Fachhochschulreife"),("Dauer","2 Jahre (1. Jahr mit Betriebspraktikum)"),("Voraussetzung","Mittlerer Schulabschluss oder Oberstufenberechtigung nach Klasse 9 am Gymnasium. Schriftliche Beratungsprüfung in Deutsch, Englisch, Mathematik."),("Unterricht","Mo–Fr im Klassenverband"),("Standort","Kirschhecke 10")],
   week=dict(Mo="S",Di="S",Mi="S",Do="S",Fr="S"), weeknote="Unterricht an fünf Tagen. Am Ende des ersten Schuljahres absolvierst du ein schulisch begleitetes Betriebspraktikum.",
-  highlights=["Eigene Schwerpunkte: Business-IT, Englisch, Europakunde oder Spanisch","Berufsorientierung mit Ausbildungsbetrieben und Agentur für Arbeit","Förderkurse in Deutsch, Mathe, Englisch und BWL","Volle Fachhochschulreife nach Praktikum oder Ausbildung"],
-  subjects=[("Berufsbezogen",["BWL mit Rechnungswesen","Volkswirtschaftslehre","Informationswirtschaft","Mathematik","Physik","Englisch","Business-IT / Englisch / Europakunde / Spanisch"]),("Berufsübergreifend",["Deutsch / Kommunikation","Religionslehre","Sport / Gesundheit","Politik / Gesellschaftslehre"]),("Wahlpflicht",["Förderkurse D, M, E, BWL"])],
+  highlights=["Differenzierung nach Wahl: Spanisch, Englisch oder Gesundheitscoaching","Berufsorientierungswoche, Messen und die Berufsorientierungstage „Projekt Zukunft“","Hoch³ – Erlebnispädagogik, Ausflüge und Klassenfahrt in der 12","Förderunterricht in den Prüfungsfächern und Patenschaften für die 11","Volle Fachhochschulreife nach Praktikum oder Ausbildung"],
+  subjects=[("Berufsbezogen",["BWL mit Rechnungswesen","Volkswirtschaftslehre","Informationswirtschaft","Mathematik","Physik","Englisch"]),("Berufsübergreifend",["Deutsch / Kommunikation","Religionslehre","Sport / Gesundheit","Politik / Gesellschaftslehre"]),("Differenzierung (eins nach Wahl)",["Spanisch","Englisch","Gesundheitscoaching"]),("Förderunterricht",["Deutsch","Mathematik","Englisch","BWL"])],
+  diff=[("Spanisch","Sprache, Kultur, Zukunft","Spanisch ist eine der meistgesprochenen Sprachen der Welt. Du übst Sprechen, Hören, Lesen und Schreiben in Alltags- und Berufssituationen, baust einen sicheren Grundwortschatz auf und entdeckst Alltag, Feste und Traditionen in Spanien und Lateinamerika. Ein Pluspunkt für Bewerbungen, Praktika und Reisen."),
+        ("Englisch","Mehr Sicherheit in der Weltsprache","Zusätzliche Englischstunden für alle, die im Beruf und im Studium souverän auf Englisch kommunizieren wollen: Gespräche, E-Mails, Präsentationen und Texte aus der Wirtschaft."),
+        ("Gesundheitscoaching","Neu: Gesundheit, Psychologie, Teamarbeit","Du lernst, gesund und selbstbestimmt durch Schule und Ausbildung zu gehen: Ernährung, Grundlagen der Psychologie, Umgang mit Stress, Entspannung und Achtsamkeit, Kommunikation und Konfliktlösung. Statt Klausuren gibt es Projekte im Team. Hier geht es um Stärkung, nicht um Bewertung.")],
+  praktikum="Für die volle Fachhochschulreife brauchst du 24 Wochen Praktikum. Angerechnet werden 2 Wochen Praktikum im März und 4 Wochen aus Informationswirtschaft. Es bleiben 18 Wochen einschlägiges Praktikum in Wirtschaft und Verwaltung. Mit der Fachhochschulreife kannst du an einer Fachhochschule studieren oder eine Ausbildung im gehobenen öffentlichen Dienst beginnen, zum Beispiel bei Stadt, Finanzverwaltung, Polizei oder Zoll.",
   exam=dict(title="Abschlussprüfung", note="Für den schulischen Teil der Fachhochschulreife müssen diese Prüfungsfächer bestanden werden:", parts=[("BWL mit Rechnungswesen",1),("Deutsch",1),("Mathematik",1),("Englisch",1)], equal=True),
   next=[("Studium","#","Mit voller Fachhochschulreife an Fachhochschulen studieren."),("Ausbildung","#","Mit Vorsprung in eine kaufmännische Ausbildung.")],
   contacts=["Sophie Benczek","Moritz Elsen"],
@@ -169,6 +173,12 @@ def shell():
     return fix(head), fix(foot), script
 
 def page(c, head, foot, script):
+    diff = ""
+    if c.get("diff"):
+        diff = '<section class="block"><h2>Dein Differenzierungsfach</h2><p class="muted">Du wählst eines dieser Fächer, zwei Stunden pro Woche.</p><div class="diffs">' + "".join(
+            f'<article><h3>{e(t)}</h3><p class="d-sub">{e(st)}</p><p>{e(tx)}</p></article>' for t,st,tx in c["diff"]) + "</div></section>"
+    if c.get("praktikum"):
+        diff += f'<section class="block"><h2>Praktikum und Fachhochschulreife</h2><p>{e(c["praktikum"])}</p></section>'
     facts = "".join(f"<div><dt>{e(k)}</dt><dd>{e(v)}</dd></div>" for k,v in c["facts"])
     week = ""
     if c.get("week"):
@@ -225,7 +235,7 @@ def page(c, head, foot, script):
   <div class="wrap course-layout">
     <div class="course-main">
       <section class="block"><p class="intro">{e(c['intro'])}</p></section>
-      {week}{hl}{subj}{exam}{nxt}
+      {week}{hl}{subj}{diff}{exam}{nxt}
     </div>
     <aside class="course-side" aria-label="Steckbrief">
       <div class="card">
